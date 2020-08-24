@@ -9,3 +9,6 @@ body {
   font-style: italic;
   font-weight: 500;
 }
+#pre {
+  max-height: 400px;
+}

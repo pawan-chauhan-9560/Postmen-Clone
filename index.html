@@ -9,6 +9,7 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -17,7 +18,7 @@
       crossorigin="anonymous"
     />
 
-    <title>PostMen</title>
+    <title>PostMen by PawanChauhan</title>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -124,9 +125,9 @@
                 type="radio"
                 name="contentType"
                 id="customRadio"
-                value="custom"
+                value="params"
               />
-              <label class="form-check-label" for="custom">
+              <label class="form-check-label" for="params">
                 Custom Parameters
               </label>
             </div>
@@ -136,9 +137,7 @@
       <!-- Parameters Box -->
       <div id="parametersBox">
         <div class="form-row">
-          <label for="parameter-box" class="col-sm-2 col-form-label"
-            >Parameter 1</label
-          >
+          <label for="url" class="col-sm-2 col-form-label">Parameter 1</label>
           <div class="col-md-4">
             <input
               type="text"
@@ -157,13 +156,14 @@
           </div>
           <button class="button btn btn-primary" id="plusBtn">+</button>
         </div>
+        <!-- Adding new parameters -->
+        <div id="params"></div>
       </div>
-      <!-- Adding new parameters -->
-      <div id="params"></div>
+
       <!-- JSON Request Box -->
       <div class="my-3" id="requestJsonBox">
         <div class="form-group row">
-          <label for="json-box" class="col-sm-2 col-form-label"
+          <label for="jsonBox" class="col-sm-2 col-form-label"
             >Enter JSON here</label
           >
           <div class="col-sm-8">
@@ -184,13 +184,15 @@
       <!-- Response Box -->
       <div class="my-3" id="responseJsonBox">
         <div class="form-group row">
-          <label for="response-box" class="col-sm-2 col-form-label"
+          <label for="responseBox" class="col-sm-2 col-form-label"
             >Response</label
           >
           <div class="col-sm-8">
-            <textarea class="form-control" id="responseJsonTxt" rows="3">
+            <!-- <textarea class="form-control" id="responseJsonTxt" rows="3">
 Your Response </textarea
-            >
+            > -->
+            <pre id="pre" class="language-javascript">
+              <code id="code" class="language-javascript">Your Response</code></pre>
           </div>
         </div>
       </div>
@@ -214,5 +216,6 @@ Your Response </textarea
       crossorigin="anonymous"
     ></script>
     <script src="main.js"></script>
+    <script src="prism.js"></script>
   </body>
 </html>
